@@ -9,7 +9,7 @@ module.exports = function (app){
     // Below code handles when users 'visit' a page.
     // In each of the below cases the user is shown an HTML page of content
 
-
+    
     app.get('/notes', function(request, response) {
         response.sendFile(path.join(__dirname, '../public/notes.html'));
     });
@@ -17,4 +17,4 @@ module.exports = function (app){
     app.get('*', function(request, response) {
         response.sendFile(path.join(__dirname, '../public/index.html'));
     });
-}; 
+};
